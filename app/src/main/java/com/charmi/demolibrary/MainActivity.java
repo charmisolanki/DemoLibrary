@@ -1,4 +1,4 @@
-package com.nrai.demolibrary;
+package com.charmi.demolibrary;
 
 import androidx.appcompat.app.AppCompatActivity;
 

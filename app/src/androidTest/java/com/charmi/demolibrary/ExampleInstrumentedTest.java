@@ -1,4 +1,4 @@
-package com.nrai.demolibrary;
+package com.charmi.demolibrary;
 
 import android.content.Context;
 

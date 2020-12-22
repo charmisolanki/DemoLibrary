@@ -1,4 +1,4 @@
-package com.nrai.toastlibrary;
+package com.charmi.toastlibrary;
 
 import org.junit.Test;
 
