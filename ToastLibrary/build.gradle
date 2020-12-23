@@ -1,5 +1,23 @@
 //apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.panpf.bintray-publish'
+
+publish {
+
+    def groupProjectID = 'com.charmi.toastlibrary'
+    def artifactProjectID = 'displaytoast'
+    def publishVersionID = '1.4'
+
+    userOrg = 'charmi'
+    repoName = 'TestingRepositoy'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'This is library description- showing simple toast message'
+    website = 'https://github.com/charmisolanki/DemoLibrary'
+
+}
+
 
 android {
     compileSdkVersion 29
@@ -8,8 +26,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "1.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
