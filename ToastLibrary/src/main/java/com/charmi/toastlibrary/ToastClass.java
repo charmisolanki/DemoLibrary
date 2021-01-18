@@ -5,8 +5,15 @@ import android.widget.Toast;
 
 public  class ToastClass {
 
-    public static void showToast(Context ctx){
+    private static String client_key = "CHARMI123SOLANKI1234";
+
+    public void showToast(Context ctx){
         Toast.makeText(ctx, "Hello from toast library...", Toast.LENGTH_LONG).show();
+
+        demoFunc(client_key);
+    }
+
+    public void demoFunc(String key){
 
     }
 }
