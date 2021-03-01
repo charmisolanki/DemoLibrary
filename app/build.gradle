@@ -1,12 +1,30 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
 //apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.panpf.bintray-publish'
+
+publish {
+
+    def groupProjectID = 'com.charmi.toastlibrary'
+    def artifactProjectID = 'displaytoast'
+    def publishVersionID = '2.2'
+
+    userOrg = 'charmi'
+    repoName = 'TestingRepositoy'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'This is library description- showing simple toast message'
+    website = 'https://github.com/charmisolanki/DemoLibrary'
+
+}
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.nrai.demolibrary"
+//        applicationId "com.nrai.demolibrary"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 3
@@ -36,3 +54,57 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 }
+
+
+////apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.android.library'
+//apply plugin: 'com.github.panpf.bintray-publish'
+//
+//publish {
+//
+//    def groupProjectID = 'com.charmi.toastlibrary'
+//    def artifactProjectID = 'displaytoast'
+//    def publishVersionID = '2.1'
+//
+//    userOrg = 'charmi'
+//    repoName = 'TestingRepositoy'
+//    groupId = groupProjectID
+//    artifactId = artifactProjectID
+//    publishVersion = publishVersionID
+//    desc = 'This is library description- showing simple toast message'
+//    website = 'https://github.com/charmisolanki/DemoLibrary'
+//
+//}
+//
+//
+//android {
+//    compileSdkVersion 29
+//    buildToolsVersion "29.0.3"
+//
+//    defaultConfig {
+//        minSdkVersion 16
+//        targetSdkVersion 29
+//        versionCode 10
+//        versionName "2.0"
+//
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        consumerProguardFiles "consumer-rules.pro"
+//    }
+//
+//    buildTypes {
+//        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+//    }
+//}
+//
+//dependencies {
+//    implementation fileTree(dir: "libs", include: ["*.jar"])
+//    implementation 'androidx.appcompat:appcompat:1.2.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+//    testImplementation 'junit:junit:4.13.1'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+//
+//}
