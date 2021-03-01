@@ -6,7 +6,7 @@ publish {
 
     def groupProjectID = 'com.charmi.toastlibrary'
     def artifactProjectID = 'displaytoast'
-    def publishVersionID = '2.3'
+    def publishVersionID = '3.1'
 
     userOrg = 'charmi'
     repoName = 'TestingRepositoy'
@@ -26,8 +26,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 10
-        versionName "2.3"
+        versionCode 11
+        versionName "3.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
