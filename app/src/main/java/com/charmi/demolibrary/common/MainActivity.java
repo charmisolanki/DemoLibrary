@@ -1,4 +1,4 @@
-package com.charmi.demolibrary;
+package com.charmi.demolibrary.common;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.charmi.demolibrary.BuildConfig;
+import com.charmi.demolibrary.R;
 
 public class MainActivity extends AppCompatActivity {
 
