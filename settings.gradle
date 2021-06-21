@@ -1,3 +1,0 @@
-include ':ToastLibrary'
-include ':app'
-rootProject.name = "DemoLibrary"
