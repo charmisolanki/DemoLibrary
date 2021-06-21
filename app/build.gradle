@@ -28,7 +28,7 @@ android {
 
     defaultConfig {
         applicationId "com.nrai.demolibrary"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 4
         versionName "3.1"

@@ -1,8 +1,9 @@
 package com.charmi.demolibrary.gift.activites;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.charmi.demolibrary.R;
 
