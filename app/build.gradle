@@ -1,34 +1,37 @@
-//apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.library'
+//apply plugin: 'com.github.panpf.bintray-publish'
+
+
 //apply plugin: 'com.novoda.bintray-release'
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.panpf.bintray-publish'
 
-publish {
 
-    def groupProjectID = 'com.charmi.toastlibrary'
-    def artifactProjectID = 'displaytoast'
-    def publishVersionID = '2.2'
-
-    userOrg = 'charmi'
-    repoName = 'TestingRepositoy'
-    groupId = groupProjectID
-    artifactId = artifactProjectID
-    publishVersion = publishVersionID
-    desc = 'This is library description- showing simple toast message'
-    website = 'https://github.com/charmisolanki/DemoLibrary'
-
-}
+//publish {
+//
+//    def groupProjectID = 'com.charmi.toastlibrary'
+//    def artifactProjectID = 'displaytoast'
+//    def publishVersionID = '3.1'
+//
+//    userOrg = 'charmi'
+//    repoName = 'TestingRepositoy'
+//    groupId = groupProjectID
+//    artifactId = artifactProjectID
+//    publishVersion = publishVersionID
+//    desc = 'This is library description- showing simple toast message'
+//    website = 'https://github.com/charmisolanki/DemoLibrary'
+//
+//}
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-//        applicationId "com.nrai.demolibrary"
+        applicationId "com.nrai.demolibrary"
         minSdkVersion 16
-        targetSdkVersion 29
-        versionCode 3
-        versionName "1.3"
+        targetSdkVersion 30
+        versionCode 4
+        versionName "3.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -47,7 +50,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
