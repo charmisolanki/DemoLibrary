@@ -1,33 +1,15 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.dcendents.android-maven'
+
 //apply plugin: 'com.android.library'
-//apply plugin: 'com.github.panpf.bintray-publish'
 
-
-//apply plugin: 'com.novoda.bintray-release'
-
-
-//publish {
-//
-//    def groupProjectID = 'com.charmi.toastlibrary'
-//    def artifactProjectID = 'displaytoast'
-//    def publishVersionID = '3.1'
-//
-//    userOrg = 'charmi'
-//    repoName = 'TestingRepositoy'
-//    groupId = groupProjectID
-//    artifactId = artifactProjectID
-//    publishVersion = publishVersionID
-//    desc = 'This is library description- showing simple toast message'
-//    website = 'https://github.com/charmisolanki/DemoLibrary'
-//
-//}
 
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.nrai.demolibrary"
+        applicationId "com.demolibrary"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 4
@@ -46,7 +28,35 @@ android {
         it.buildConfigField 'String', "CUSTOMER_ID", customer_id
 
     }
-}
+
+    defaultPublishConfig "solidRelease"
+
+    flavorDimensions "solidity"
+
+    productFlavors {
+
+        solid{
+            dimension "solidity"
+
+            applicationId "com.solid"
+            minSdkVersion 21
+            targetSdkVersion 30
+            versionCode 1
+            versionName "1.0"
+        }
+
+        liquid{
+            dimension "solidity"
+
+            applicationId "com.liquid"
+            minSdkVersion 21
+            targetSdkVersion 30
+            versionCode 1
+            versionName "1.0"
+        }
+        }
+
+    }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -58,56 +68,26 @@ dependencies {
 
 }
 
-
-////apply plugin: 'com.novoda.bintray-release'
-//apply plugin: 'com.android.library'
-//apply plugin: 'com.github.panpf.bintray-publish'
+//group = 'com.github.charmisolanki.DemoLibrary'
+//version = 1.0
 //
-//publish {
-//
-//    def groupProjectID = 'com.charmi.toastlibrary'
-//    def artifactProjectID = 'displaytoast'
-//    def publishVersionID = '2.1'
-//
-//    userOrg = 'charmi'
-//    repoName = 'TestingRepositoy'
-//    groupId = groupProjectID
-//    artifactId = artifactProjectID
-//    publishVersion = publishVersionID
-//    desc = 'This is library description- showing simple toast message'
-//    website = 'https://github.com/charmisolanki/DemoLibrary'
-//
-//}
-//
-//
-//android {
-//    compileSdkVersion 29
-//    buildToolsVersion "29.0.3"
-//
-//    defaultConfig {
-//        minSdkVersion 16
-//        targetSdkVersion 29
-//        versionCode 10
-//        versionName "2.0"
-//
-//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-//        consumerProguardFiles "consumer-rules.pro"
-//    }
-//
-//    buildTypes {
-//        release {
-//            minifyEnabled true
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//if (android.productFlavors.size() > 0) {
+//    android.libraryVariants.all { variant ->
+//        if (variant.name.toLowerCase().contains("debug")) {
+//            return
 //        }
+//
+//        def bundleTask = tasks["bundle${variant.name.capitalize()}"]
+//
+//        artifacts {
+//            archives(bundleTask.archivePath) {
+//                classifier variant.flavorName
+//                builtBy bundleTask
+//                name = project.name
+//            }
+//        }
+//
 //    }
-//}
-//
-//dependencies {
-//    implementation fileTree(dir: "libs", include: ["*.jar"])
-//    implementation 'androidx.appcompat:appcompat:1.2.0'
-//    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-//    testImplementation 'junit:junit:4.13.1'
-//    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 //
 //}
+//
