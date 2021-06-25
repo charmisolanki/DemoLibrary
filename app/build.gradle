@@ -29,7 +29,7 @@ android {
 
     }
 
-   // defaultPublishConfig "solidRelease"
+   defaultPublishConfig "liquidRelease"
 
     flavorDimensions "solidity"
 
