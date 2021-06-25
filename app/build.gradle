@@ -1,7 +1,7 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.android.library'
 
-//apply plugin: 'com.android.library'
 
 
 android {
@@ -9,7 +9,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.demolibrary"
+//        applicationId "com.demolibrary"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 4
@@ -38,7 +38,7 @@ android {
         solid{
             dimension "solidity"
 
-            applicationId "com.solid"
+//            applicationId "com.solid"
             minSdkVersion 21
             targetSdkVersion 30
             versionCode 1
@@ -48,13 +48,20 @@ android {
         liquid{
             dimension "solidity"
 
-            applicationId "com.liquid"
+//            applicationId "com.liquid"
             minSdkVersion 21
             targetSdkVersion 30
             versionCode 1
             versionName "1.0"
         }
         }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 
     }
 
@@ -69,7 +76,6 @@ dependencies {
 }
 
 //group = 'com.github.charmisolanki.DemoLibrary'
-//version = 1.0
 //
 //if (android.productFlavors.size() > 0) {
 //    android.libraryVariants.all { variant ->
@@ -86,8 +92,5 @@ dependencies {
 //                name = project.name
 //            }
 //        }
-//
 //    }
-//
 //}
-//
