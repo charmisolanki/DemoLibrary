@@ -37,8 +37,6 @@ android {
 
         solid{
             dimension "solidity"
-
-//            applicationId "com.solid"
             minSdkVersion 21
             targetSdkVersion 30
             versionCode 1
@@ -47,8 +45,6 @@ android {
 
         liquid{
             dimension "solidity"
-
-//            applicationId "com.liquid"
             minSdkVersion 21
             targetSdkVersion 30
             versionCode 1
